@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu Bản Thân</title>
+    <link rel="stylesheet" href="style.css"> <!-- Liên kết đến tệp CSS -->
+</head>
+<body>
+    <div>
+        <img id="anh" src="image/anh0.png" alt="">
+        <header>
+            <h1>Cao Văn Nam Anh</h1> <!-- Tiêu đề trang -->
+        </header>
+    
+        <section class="about">
+            <h2>Về Tôi</h2>
+            <p>Xin chào! Tôi là Cao Văn Nam Ah, một lập trình viên đam mê với công nghệ và phát triển phần mềm. Tôi là sinh viên mới bước chân vào con đường này</p>
+        </section>
+    
+        <section class="contact">
+            <h2>Liên Hệ</h2>
+            <p>Email: <a href="mailto:namanh.nguyen@gamil.com">namanh.nguyen@gamil.com</a></p>
+            <p>Số điện thoại: 0123456789</p>
+        </section>
+    
+        <footer>
+            <p>© 2024 Cao Văn Nam Anh. Mọi quyền được bảo lưu.</p>
+        </footer>
+    </div>
+    <script>
+        autoplay();
+             var arrAnh = new Array();
+        for(let i=0;i<3;i++){
+            arrAnh[i] = new Image(); // đối tượng ảnh
+            arrAnh[i].src = 'image/anh' +i+'.png'
+            // console.log(arrAnh[i].src)
+        }
+        var currencyIndex = 0;
+        function next(){
+            if(currencyIndex == arrAnh.length-1){
+                currencyIndex = 0
+            }else{
+                currencyIndex++
+            }
+            document.getElementById('anh').src = arrAnh[currencyIndex].src;
+        }
+        var t;
+        function autoplay(){
+            // lặp lại cái công việc next ảnh 
+            t = setInterval('next()',1000);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+/* Căn giữa hình ảnh */
+img#anh {
+    width: 1000px; /* Chiếm toàn bộ chiều rộng của phần tử chứa */
+    height: 400px; /* Tự động điều chỉnh chiều cao theo tỉ lệ gốc */
+    display: block; /* Đặt display block để dễ dàng căn giữa */
+    margin: 0 auto; /* Căn giữa ảnh */
+    max-width: 1500px; /* Đặt chiều rộng tối đa để ảnh không vượt quá 1500px */
+    border-radius: 10px; /* Bo tròn các góc của ảnh */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng cho ảnh giống banner */
+}
+
+/* Căn giữa tiêu đề trang */
+header h1 {
+    font-family: Arial, sans-serif; /* Font chữ Arial */
+    font-size: 16pt; /* Cỡ chữ 16pt */
+    font-weight: bold; /* Đậm */
+    font-style: italic; /* Nghiêng */
+    text-decoration: underline; /* Gạch chân */
+    color: #f1f1f1; /* Màu chữ khác đen và xanh, bạn có thể thay đổi màu này */
+    text-align: center; /* Căn giữa tiêu đề */
+    margin-top: 20px; /* Khoảng cách phía trên tiêu đề */
+}
+
+/* Căn giữa phần giới thiệu */
+.about, .contact, footer {
+    text-align: center; /* Căn giữa nội dung văn bản */
+    font-family: "Times New Roman", serif; /* Font chữ Times New Roman */
+    font-size: 14pt; /* Cỡ chữ 14pt */
+    font-style: italic; /* Chữ nghiêng */
+    color: rgb(237, 237, 241); /* Màu xanh */
+    margin: 20px auto; /* Căn giữa nội dung với khoảng cách phía trên và dưới */
+    max-width: 800px; /* Chiều rộng tối đa của các phần nội dung */
+}
+
+/* Căn giữa các tiêu đề nhỏ */
+.about h2, .contact h2 {
+    font-family: Arial, sans-serif; /* Font chữ Arial */
+    font-size: 16pt; /* Cỡ chữ 16pt */
+    font-weight: bold; /* Đậm */
+    font-style: italic; /* Nghiêng */
+    text-decoration: underline; /* Gạch chân */
+    color: #6fb7f5; /* Màu chữ khác đen và xanh, bạn có thể thay đổi màu này */
+}
+
+/* Căn chỉnh hyperlink */
+a {
+    color: rgb(8, 206, 236); /* Màu chữ đỏ */
+    text-decoration: none; /* Không có gạch chân */
+}
+body {
+    margin: 0; /* Loại bỏ khoảng cách mặc định của body */
+    padding: 0; /* Loại bỏ khoảng cách mặc định của body */
+    font-family: "Times New Roman", serif; /* Font chữ mặc định cho toàn bộ trang */
+    font-size: 14pt; /* Cỡ chữ mặc định */
+    color: blue; /* Màu chữ mặc định */
+    position: relative;
+    overflow: hidden; /* Đảm bảo không có cuộn trang không mong muốn */
+}
+
+/* Tạo lớp phủ cho ảnh nền */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('image/Chao-mung-quoc-khanh-2-9.png'); /* Đường dẫn tới ảnh nền */
+    background-size: cover; /* Đảm bảo ảnh nền bao phủ toàn bộ màn hình */
+    background-repeat: no-repeat; /* Không lặp lại ảnh nền */
+    background-attachment: fixed; /* Ảnh nền cố định khi cuộn trang */
+    background-position: center; /* Căn giữa ảnh nền */
+    filter: blur(8px); /* Độ mờ của ảnh nền */
+    z-index: -1; /* Đảm bảo lớp phủ nằm dưới nội dung */
+}
